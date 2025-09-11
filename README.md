@@ -20,7 +20,7 @@
 <br>
 
 <p align="center">
-  <img alt="rocketpay" src="./image_project.png" width="100%">
+  <img alt="Imagem de Portofolio" src="./public/image_project.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
