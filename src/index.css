@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-color: #0e0e0e;
+  --medium-black-color: #0e0e0ed9;
+  --text-color: #f0ede8;
+  --gray-color: #888;
+  --light-green-color: #c8f060;
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  --sans: 'DM Sans', sans-serif;
+  --serif: 'DM Serif Display', Georgia, serif;
+}
+
+body {
+  background-color: var(--black-color);
+  color: var(--text-color);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--medium-black-color);
+  border-bottom: 0.1rem solid var(--border-color);
+  backdrop-filter: blur(12px);
+  padding: 1.2rem 2.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a.logo {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+nav div.links ul {
+  display: flex;
+  gap: 2rem;
+}
+
+div.links li {
+  list-style: none;
+}
+
+div.links li a {
+  font-size: 0.85rem;
+  color: var(--gray-color);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: color 0.25s;
+}
+
+div.links a:hover {
+  color: var(--text-color);
+}
+
+nav a.contact-me {
+  font-size: 0.78rem;
+  font-weight: 500;
+  background-color: var(--light-green-color);
+  color: var(--black-color);
+  padding: 0.55rem 1.2rem;
+  border-radius: 2rem;
+  letter-spacing: 0.04em;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+a.contact-me:hover {
+  opacity: 0.85;
+  transform: translateY(-0.0625rem);
+}
