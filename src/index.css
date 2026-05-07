@@ -1,89 +1,169 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  --black-color: #0e0e0e;
-  --medium-black-color: #0e0e0ed9;
-  --text-color: #f0ede8;
-  --gray-color: #888;
-  --light-green-color: #c8f060;
-  --border-color: rgba(255, 255, 255, 0.08);
+    --black-color: #0e0e0e;
+    --medium-black-color: #0e0e0ed9;
+    --text-color: #f0ede8;
+    --gray-color: #888;
+    --light-green-color: #c8f060;
+    --border-color: rgba(255, 255, 255, 0.08);
 
-  --sans: 'DM Sans', sans-serif;
-  --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+    --serif: 'DM Serif Display', Georgia, serif;
 }
 
 body {
-  background-color: var(--black-color);
-  color: var(--text-color);
-  font-family: var(--sans);
-  font-weight: 300;
-  line-height: 1.6;
+    background-color: var(--black-color);
+    color: var(--text-color);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 2.5rem;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--medium-black-color);
-  border-bottom: 0.1rem solid var(--border-color);
-  backdrop-filter: blur(12px);
-  padding: 1.2rem 2.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--medium-black-color);
+    border-bottom: 0.1rem solid var(--border-color);
+    backdrop-filter: blur(12px);
+    padding: 1.2rem 2.5rem;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav a.logo {
-  font-family: var(--serif);
-  font-size: 1.1rem;
-  color: var(--text-color);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
 nav div.links ul {
-  display: flex;
-  gap: 2rem;
+    display: flex;
+    gap: 2rem;
 }
 
 div.links li {
-  list-style: none;
+    list-style: none;
 }
 
 div.links li a {
-  font-size: 0.85rem;
-  color: var(--gray-color);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  transition: color 0.25s;
+    font-size: 0.85rem;
+    color: var(--gray-color);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.25s;
 }
 
 div.links a:hover {
-  color: var(--text-color);
+    color: var(--text-color);
 }
 
 nav a.contact-me {
-  font-size: 0.78rem;
-  font-weight: 500;
-  background-color: var(--light-green-color);
-  color: var(--black-color);
-  padding: 0.55rem 1.2rem;
-  border-radius: 2rem;
-  letter-spacing: 0.04em;
-  transition: opacity 0.2s, transform 0.2s;
+    font-size: 0.78rem;
+    font-weight: 500;
+    background-color: var(--light-green-color);
+    color: var(--black-color);
+    padding: 0.55rem 1.2rem;
+    letter-spacing: 0.04em;
+    transition: opacity 0.2s, transform 0.2s;
 }
 
 a.contact-me:hover {
-  opacity: 0.85;
-  transform: translateY(-0.0625rem);
+    opacity: 0.85;
+    transform: translateY(-0.0625rem);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    min-height: 100vh;
+    padding: 8rem 2.5rem 4rem;
+}
+
+main h2.text {
+    position: absolute;
+    font-family: var(--serif);
+    font-size: 18rem;
+    top: 50%;
+    left: -2rem;
+    transform: translateY(-50%);
+    /* Centraliza de acordo com a altura do elemento e não do pai (main#home) */
+    color: rgba(255, 255, 255, 0.02);
+    line-height: 1;
+    z-index: -1;
+}
+
+main span#status-tag {
+    font-size: 0.75rem;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    padding: 0.3rem 0.8rem;
+    color: var(--light-green-color);
+    border: 0.0625rem solid var(--light-green-color);
+}
+
+main h1 {
+    max-width: 56.25rem;
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 1.5625rem;
+}
+
+main h1 span {
+    font-style: italic;
+    color: var(--light-green-color);
+}
+
+main p {
+    max-width: 30rem;
+    margin-bottom: 2.5rem;
+    color: var(--gray-color);
+}
+
+main .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.actions a.btn-action {
+    font-size: 0.85rem;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.3);
+    color: var(--text-color);
+    padding: 0.8rem 1.8rem;
+    transform: border-color 0.2s, transform 0.2s;
+}
+
+a.btn-action:nth-child(1) {
+    background-color: var(--light-green-color);
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+.btn-action:hover {
+    border: 0.0625rem solid var(--border-color);
+    transform: translateY(-0.0625rem);
 }
