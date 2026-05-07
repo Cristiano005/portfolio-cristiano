@@ -7,7 +7,7 @@ export default function Header() {
                 <div className="links">
                     <ul>
                         <li>
-                            <a href="#">About</a>
+                            <a href="#about">About</a>
                         </li>
                         <li>
                             <a href="#">Experience</a>
