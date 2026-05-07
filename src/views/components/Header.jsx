@@ -20,7 +20,7 @@ export default function Header() {
                         </li>
                     </ul>
                 </div>
-                <a href="#" className="contact-me">
+                <a href="#" className="btn btn-contact-me contact-me">
                     Fale comigo
                 </a>
             </nav>
