@@ -1,4 +1,7 @@
 import Header from './components/Header';
+import ExperienceCard from './components/ExperienceCard';
+
+import experiencesList from '../utils/experiences';
 
 function App() {
 
@@ -28,10 +31,12 @@ function App() {
                 </div>
                 <div className="container-wrapper">
                     <div id="details">
-                        <h2>
-                            Construindo desde <br></br>
-                            <span> os 15 anos </span>
-                        </h2>
+                        <div className="section-title">
+                            <h2>
+                                Construindo desde <br></br>
+                                <span> os 15 anos </span>
+                            </h2>
+                        </div>
                         <p>
                             Desenvolvedor full-stack com experiência em sistemas reais — desde plataformas de advocacia até
                             soluções de comunicação omnichannel. Gosto de código que resolve problema de verdade.
@@ -63,6 +68,22 @@ function App() {
                     </div>
                 </div>
             </section >
+            <section id="experiences">
+                <div className="section-label">
+                    Experiências
+                </div>
+                <div className="section-title">
+                    <h2>
+                        Onde já <br></br>
+                        <span> trabalhei </span>
+                    </h2>
+                </div>
+                <div className="experience-list">
+                    {experiencesList.map(experience => <ExperienceCard key={experience.id} experience={experience} 
+                        onClick={experience.isActive = !experience.isActive} />)
+                    }
+                </div>
+            </section>
         </>
     )
 }

@@ -6,11 +6,14 @@
 
 :root {
     --black-color: #0e0e0e;
+    --bg2: #161616;
     --medium-black-color: #0e0e0ed9;
+    --light-black-color: #1e1e1e;
     --text-color: #f0ede8;
     --gray-color: #888;
     --light-gray-color: #aaa;
     --light-green-color: #c8f060;
+    --light-blue-color: #60d4f0;
     --border-color: rgba(255, 255, 255, 0.08);
 
     --sans: 'DM Sans', sans-serif;
@@ -195,14 +198,7 @@ div.section-label::after {
     opacity: 0.5;
 }
 
-.container-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
-    gap: 4rem;
-}
-
-.container-wrapper #details h2 {
+.section-title h2 {
     font-family: var(--serif);
     font-size: clamp(2.2rem, 5vw, 3.8rem);
     font-weight: 400;
@@ -211,9 +207,16 @@ div.section-label::after {
     margin-bottom: 3rem;
 }
 
-#details h2 span {
+.section-title span {
     font-style: italic;
     color: var(--light-green-color);
+}
+
+.container-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    gap: 4rem;
 }
 
 #details p {
@@ -238,4 +241,65 @@ div.section-label::after {
     color: var(--light-green-color);
     line-height: 1;
     margin-bottom: 0.3rem;
+}
+
+section#experiences .experience-list {
+    background-color: var(--bg2);
+    border-radius: 1rem;
+}
+
+.experience {
+    padding: 2rem;
+}
+
+.experience.active {
+    background-color: var(--light-black-color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.header .role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.period {
+    font-size: 0.78rem;
+    color: var(--gray-color);
+}
+
+.experience .exp-company {
+    font-size: 0.85rem;
+    color: var(--light-blue-color);
+    margin-bottom: 0.8rem;
+}
+
+.exp-description {
+    display: none;
+    font-size: 0.88rem;
+    color: var(--gray-color);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.experience.active .exp-description {
+    display: block;
+}
+
+.tech-tags {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tech-tag {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.7rem;
+    color: var(--gray-color);
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 2rem;
 }
