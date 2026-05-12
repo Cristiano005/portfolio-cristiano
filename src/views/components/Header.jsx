@@ -7,16 +7,16 @@ export default function Header() {
                 <div className="links">
                     <ul>
                         <li>
-                            <a href="#about">About</a>
+                            <a href="#about">Sobre</a>
                         </li>
                         <li>
-                            <a href="#experiences">Experience</a>
+                            <a href="#experiences">Experiências</a>
                         </li>
                         <li>
-                            <a href="#">Projects</a>
+                            <a href="#projects">Projetos</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#contact">Contato</a>
                         </li>
                     </ul>
                 </div>
