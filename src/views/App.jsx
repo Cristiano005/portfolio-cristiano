@@ -1,7 +1,9 @@
 import Header from './components/Header';
 import ExperienceCard from './components/ExperienceCard';
+import ProjectCard from './components/ProjectCard';
 
 import experiencesList from '../utils/experiences';
+import projectsList from '../utils/projects';
 
 function App() {
 
@@ -79,8 +81,24 @@ function App() {
                     </h2>
                 </div>
                 <div className="experience-list">
-                    {experiencesList.map(experience => <ExperienceCard key={experience.id} experience={experience} 
+                    {experiencesList.map(experience => <ExperienceCard key={experience.id} experience={experience}
                         onClick={experience.isActive = !experience.isActive} />)
+                    }
+                </div>
+            </section>
+            <section id="projects">
+                <div className="section-label">
+                    Projetos
+                </div>
+                <div className="section-title">
+                    <h2>
+                        O que <br></br>
+                        <span> construí </span>
+                    </h2>
+                </div>
+                <div className="projects-grid">
+                    {projectsList.map(project => <ProjectCard key={project.id} project={project}
+                        onClick={project.isActive = !project.isActive} />)
                     }
                 </div>
             </section>
