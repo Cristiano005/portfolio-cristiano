@@ -1,9 +1,11 @@
 import Header from './components/Header';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
+import SkillCard from './components/SkillCard';
 
 import experiencesList from '../utils/experiences';
 import projectsList from '../utils/projects';
+import skillsList from '../utils/skills';
 
 function App() {
 
@@ -100,6 +102,20 @@ function App() {
                     {projectsList.map(project => <ProjectCard key={project.id} project={project}
                         onClick={project.isActive = !project.isActive} />)
                     }
+                </div>
+            </section>
+            <section id="skills">
+                <div className="section-label">
+                    Habilidades
+                </div>
+                <div className="section-title">
+                    <h2>
+                        O que <br></br>
+                        <span> sei fazer </span>
+                    </h2>
+                </div>
+                <div id="skills-grid">
+                    {skillsList.map(skill => <SkillCard skill={skill} />)}
                 </div>
             </section>
         </>

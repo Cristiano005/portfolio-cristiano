@@ -372,3 +372,50 @@ section#projects .projects-grid {
 .project-card .tech-tags {
     flex-wrap: wrap;
 }
+
+section#skills #skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 0.0625rem solid var(--border-color);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.skill-group {
+    background-color: var(--bg2);
+    border-right: 0.0625rem solid var(--border-color);
+    padding: 2rem;
+}
+
+.skill-group:last-child {
+    border-right: none;
+}
+
+.skill-group-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.0864rem;
+    text-transform: uppercase;
+    color: var(--light-green-color);
+    margin-bottom: 1.2rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.88rem;
+    color: #bbb;
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+    border-bottom: 0.0625rem solid var(--border-color);
+}
+
+.skill-item:last-child {
+    border-bottom: none;
+}
+
+span.dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    background-color: var(--light-green-color);
+    border-radius: 50%;
+}
