@@ -118,6 +118,46 @@ function App() {
                     {skillsList.map(skill => <SkillCard skill={skill} />)}
                 </div>
             </section>
+            <section id="contact">
+                <div className="section-label">
+                    Contato
+                </div>
+                <div id="contact-inner">
+                    <div id="contact-info">
+                        <p>
+                            Estou aberto a oportunidades de trabalho como desenvolvedor full-stack.
+                            Se tiver uma vaga ou quiser trocar ideia sobre um projeto, me chama.
+                        </p>
+                        <div id="contact-links">
+                            <a href="#" className="contact-link" target="_blank">
+                                <span> ✉ </span>
+                                cristianosilvadesousa05@gmail.com
+                            </a>
+                            <a href="https://www.linkedin.com/in/cristiano-ss/" className="contact-link" target="_blank">
+                                <span> In </span>
+                                Linkedln
+                            </a>
+                            <a href="https://github.com/Cristiano005" className="contact-link" target="_blank">
+                                <span> gh </span>
+                                Github
+                            </a>
+                            <a href="#" className="contact-link" target="_blank">
+                                <span> ☎ </span>
+                                (19) 98175-5372
+                            </a>
+                        </div>
+                    </div>
+                    <div id="extres">
+                        <h3> Vamos <br/>
+                            construir algo <br/>
+                            <span> juntos? </span>
+                        </h3>
+                        <a href="#" className="btn btn-action">
+                            Enviar mensagem →
+                        </a>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
