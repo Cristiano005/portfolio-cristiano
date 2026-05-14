@@ -483,3 +483,18 @@ section#contact #contact-inner {
     background-color: var(--light-green-color);
     color: var(--black-color);
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    border-top: 0.0625rem solid var(--border-color);
+}
+
+footer h5 {
+    font-size: 0.78rem;
+    color: var(--gray-color);
+    font-weight: 300;
+}

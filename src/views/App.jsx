@@ -158,6 +158,10 @@ function App() {
                     </div>
                 </div>
             </section>
+            <footer>
+                <h5> Cristiano Silva de Sousa — Nova Odessa, SP</h5>
+                <h5 id="year"> 2026 </h5>
+            </footer>
         </>
     )
 }
