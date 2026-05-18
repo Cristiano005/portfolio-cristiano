@@ -16,11 +16,11 @@ export default function Header() {
                             <a href="#projects">Projetos</a>
                         </li>
                         <li>
-                            <a href="#contact">Contato</a>
+                            <a href="#skills">Habilidades</a>
                         </li>
                     </ul>
                 </div>
-                <a href="#" className="btn btn-contact-me contact-me">
+                <a href="#contact" className="btn btn-contact-me contact-me">
                     Fale comigo
                 </a>
             </nav>
