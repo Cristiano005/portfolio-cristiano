@@ -24,9 +24,13 @@ function App() {
                     Transformo ideias em sistemas reais. PHP, Laravel, Vue.js e Node.js — com foco em código limpo e entrega que funciona.
                 </p>
                 <div className="actions">
-                    <a href="./src/assets/curriculo-cristiano.pdf" className="btn btn-action" download> Baixar currículo ↓</a>
+                    <a href="./src/assets/curriculo-cristiano.pdf" className="btn btn-action" download> Ver projetos ↓</a>
                     <a href="#" className="btn btn-action"> GitHub ↗</a>
-                    <a href="#" className="btn btn-action"> Linkendln ↗</a>
+                    <a href="#" className="btn btn-action"> Linkenln ↗</a>
+                </div>
+                <div id="scroll">
+                    <span id="scroll-line"></span>
+                    scroll
                 </div>
             </main>
             <section id="about">

@@ -173,6 +173,39 @@ a.btn-action:nth-child(1) {
     transform: translateY(-0.0625rem);
 }
 
+#scroll {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    bottom: 2rem;
+    right: 2.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.06rem;
+    color: var(--gray-color);
+    text-transform: uppercase;
+}
+
+#scroll #scroll-line {
+    background-color: var(--gray-color);
+    width: 2.5rem;
+    height: 0.0625rem;
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+
+    0%, 100% {
+        width: 2.5rem;
+        opacity: 0.4;
+    }
+
+    50% {
+        width: 3.75rem;
+        opacity: 1;
+    }
+}
+
 section {
     max-width: 68.75rem;
     margin: 0 auto;
@@ -497,4 +530,12 @@ footer h5 {
     font-size: 0.78rem;
     color: var(--gray-color);
     font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .links {
+        display: none;
+    }
+
 }
