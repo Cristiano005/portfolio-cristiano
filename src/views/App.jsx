@@ -13,7 +13,7 @@ function App() {
         <>
             <Header></Header>
             <main id="home">
-                <h2 className="text"> DEV </h2>
+                <div className="bg-text"> DEV </div>
                 <span className="btn btn-tag" id="status-tag"> Disponível para novas oportunidades </span>
                 <h1>
                     Cristiano <br></br>
@@ -24,9 +24,9 @@ function App() {
                     Transformo ideias em sistemas reais. PHP, Laravel, Vue.js e Node.js — com foco em código limpo e entrega que funciona.
                 </p>
                 <div className="actions">
-                    <a href="./src/assets/curriculo-cristiano.pdf" className="btn btn-action" download> Ver projetos ↓</a>
-                    <a href="#" className="btn btn-action"> GitHub ↗</a>
-                    <a href="#" className="btn btn-action"> Linkenln ↗</a>
+                    <a href="./src/assets/curriculo-cristiano-sousa.pdf" className="btn btn-action btn-primary" target="_blank" download> Baixar currículo ↓</a>
+                    <a href="https://github.com/Cristiano005" className="btn btn-action btn-secondary" target="_blank"> GitHub ↗</a>
+                    <a href="https://linkedin.com/in/cristiano-silva-de-sousa-645119204/" className="btn btn-action btn-secondary" target="_blank"> LinkedIn ↗</a>
                 </div>
                 <div id="scroll">
                     <span id="scroll-line"></span>

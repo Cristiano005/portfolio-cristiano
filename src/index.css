@@ -105,15 +105,21 @@ main {
     padding: 8rem 2.5rem 4rem;
 }
 
-main h2.text {
+main .bg-text {
     position: absolute;
     font-family: var(--serif);
-    font-size: 18rem;
+    font-size: clamp(8rem, 20vw, 18rem);
     top: 50%;
     left: -2rem;
     transform: translateY(-50%);
     /* Centraliza de acordo com a altura do elemento e não do pai (main#home) */
     color: rgba(255, 255, 255, 0.02);
+    white-space: nowrap;
+    /* Impede que o texto quebre */
+    pointer-events: none;
+    /* Bloqueia eventos de hover, click no texto */
+    user-select: none;
+    /* Impede user de selecionar o texto com mouse */
     line-height: 1;
     z-index: -1;
 }
@@ -134,7 +140,8 @@ main h1 {
     font-size: clamp(3.5rem, 9vw, 7.5rem);
     line-height: 1;
     font-weight: 400;
-    margin-bottom: 1.5625rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
 }
 
 main h1 span {
@@ -143,33 +150,52 @@ main h1 span {
 }
 
 main p {
+    font-size: 1rem;
     max-width: 30rem;
     margin-bottom: 2.5rem;
     color: var(--gray-color);
+    line-height: 1.7;
 }
 
 main .actions {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
 a.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 0.85rem;
-    border: 0.0625rem solid rgba(255, 255, 255, 0.3);
-    color: var(--text-color);
+    letter-spacing: 0.04em;
     padding: 0.8rem 1.8rem;
-    transform: border-color 0.2s, transform 0.2s;
+    border-radius: 2rem;
+    transition: opacity 0.2s, transform 0.2s;
 }
 
-a.btn-action:nth-child(1) {
+a.btn-primary {
     background-color: var(--light-green-color);
     color: var(--black-color);
     font-weight: 500;
+    letter-spacing: 0.04em;
+    border: none;
 }
 
-.btn-action:hover {
+.btn-primary:hover {
+    opacity: 0.85;
+    transform: translateY(-0.0625rem);
+}
+
+.btn-secondary {
+    color: var(--text-color);
     border: 0.0625rem solid var(--border-color);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+    border-color: rgba(255,255,255,0.3);
     transform: translateY(-0.0625rem);
 }
 
@@ -195,7 +221,8 @@ a.btn-action:nth-child(1) {
 
 @keyframes scrollLine {
 
-    0%, 100% {
+    0%,
+    100% {
         width: 2.5rem;
         opacity: 0.4;
     }
@@ -491,7 +518,8 @@ section#contact #contact-inner {
     border-color: var(--light-green-color);
 }
 
-#contact-info, #extres {
+#contact-info,
+#extres {
     padding: 3rem;
 }
 
@@ -533,7 +561,7 @@ footer h5 {
 }
 
 @media screen and (max-width: 768px) {
-    
+
     .links {
         display: none;
     }
