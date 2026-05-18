@@ -50,7 +50,7 @@ function App() {
                             soluções de comunicação omnichannel. Gosto de código que resolve problema de verdade.
                         </p>
 
-                        <p> Minha stack principal é PHP/Laravel no back-end e Vue.js no front, com experiência em Node.js e Docker.
+                        <p> Minha stack principal é <strong> PHP/Laravel </strong> no back-end e <strong> Vue.JS </strong> no front, com experiência em <strong> Node.js </strong> e Docker.
                             Conheço o ciclo completo: do banco de dados à interface.
                         </p>
 
@@ -61,17 +61,17 @@ function App() {
                     </div>
                     <div id="about-stats">
                         <div className="stat">
-                            <h3> 3 </h3>
-                            <p> Empresas em que trabalhei </p>
+                            <div className="stat-num"> 3 </div>
+                            <div className="stat-label"> Empresas em que trabalhei </div>
                         </div>
                         <div className="stat">
-                            <h3> 6+ </h3>
-                            <p> Anos estudando e desenvolvendo </p>
+                            <div className="stat-num"> 6+ </div>
+                            <div className="stat-label"> Anos estudando e desenvolvendo </div>
                         </div>
                         <div className="stat">
-                            <h3> 21 </h3>
-                            <p> Anos de idade — muita estrada pela frente
-                            </p>
+                            <div className="stat-num"> 21 </div>
+                            <div className="stat-label"> Anos de idade — muita estrada pela frente
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,8 +152,8 @@ function App() {
                         </div>
                     </div>
                     <div id="extres">
-                        <h3> Vamos <br/>
-                            construir algo <br/>
+                        <h3> Vamos <br />
+                            construir algo <br />
                             <span> juntos? </span>
                         </h3>
                         <a href="#" className="btn btn-action">

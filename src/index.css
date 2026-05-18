@@ -195,7 +195,7 @@ a.btn-primary {
 }
 
 .btn-secondary:hover {
-    border-color: rgba(255,255,255,0.3);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-0.0625rem);
 }
 
@@ -274,7 +274,7 @@ div.section-label::after {
 
 .container-wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(19.375rem, 1fr));
     align-items: start;
     gap: 4rem;
 }
@@ -285,22 +285,42 @@ div.section-label::after {
     margin-bottom: 1.2rem;
 }
 
-#about-stats {
-    border-radius: 1rem;
-    border: 0.0625rem solid var(--border-color);
+#details strong {
+    color: var(--text-color);
+    font-weight: 500;
 }
 
-#about-stats .stat {
+#about-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.0625rem;
+    border-radius: 1rem;
+    border: 0.0625rem solid var(--border-color);
+    overflow: hidden;
+}
+
+.stat {
+    background-color: var(--bg2);
     padding: 1.5rem;
     border-bottom: 0.0625rem solid var(--border-color);
 }
 
-.stat h3 {
+.stat:last-child {
+    border-bottom: none;
+}
+
+.stat-num {
     font-family: var(--serif);
     font-size: 2.8rem;
     color: var(--light-green-color);
     line-height: 1;
     margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    letter-spacing: 0.04em;
 }
 
 section#experiences .experience-list {
