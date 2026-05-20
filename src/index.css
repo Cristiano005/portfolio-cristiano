@@ -324,16 +324,42 @@ div.section-label::after {
 }
 
 section#experiences .experience-list {
-    background-color: var(--bg2);
+    display: flex;
+    flex-direction: column;
+    gap: 0.0625rem;
+    border: 0.0625rem solid var(--border-color);
     border-radius: 1rem;
+    overflow: hidden;
+
 }
 
 .experience {
+    position: relative;
     padding: 2rem;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.experience:last-child {
+    border-bottom: none;
+}
+
+.experience:hover {
+    background-color: var(--light-black-color);
 }
 
 .experience.active {
     background-color: var(--light-black-color);
+}
+
+.experience.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0.1875rem;
+    background-color: var(--light-green-color);
 }
 
 .header {
@@ -359,6 +385,13 @@ section#experiences .experience-list {
     margin-bottom: 0.8rem;
 }
 
+.exp-note {
+    font-size: 0.78rem;
+    color: var(--gray-color);
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
 .exp-description {
     display: none;
     font-size: 0.88rem;
@@ -371,22 +404,35 @@ section#experiences .experience-list {
     display: block;
 }
 
-.tech-tags {
-    display: flex;
-    gap: 0.4rem;
+.exp-tech-tags {
+    display: none;
 }
 
+.exp-tech-tags,
+.tech-tags {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+}
+
+.experience.active .exp-tech-tags {
+    display: flex;
+}
+
+.exp-tech-tag,
 .tech-tag {
     font-size: 0.72rem;
     padding: 0.2rem 0.7rem;
     color: var(--gray-color);
     border: 0.0625rem solid var(--border-color);
     border-radius: 2rem;
+    letter-spacing: 0.04em;
 }
 
 section#projects .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+    gap: 0.0625rem;
     border: 0.0625rem solid var(--border-color);
     border-radius: 1rem;
     overflow: hidden;
@@ -401,6 +447,7 @@ section#projects .projects-grid {
     padding: 2rem;
     text-decoration: none;
     transition: background 0.2s;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -415,6 +462,13 @@ section#projects .projects-grid {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.project-header p {
+    font-family: var(--serif);
+    font-size: 0.85rem;
+    color: var(--light-green-color);
+    opacity: 0.6;
 }
 
 .project-header .redirect-icon {
@@ -435,13 +489,6 @@ section#projects .projects-grid {
     color: var(--text-color);
 }
 
-.project-header p {
-    font-family: var(--serif);
-    font-size: 0.85rem;
-    color: var(--light-green-color);
-    opacity: 0.6;
-}
-
 .project-desc {
     font-size: 0.85rem;
     color: var(--gray-color);
@@ -450,6 +497,7 @@ section#projects .projects-grid {
 }
 
 .project-card .tech-tags {
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -581,6 +629,14 @@ footer h5 {
 }
 
 @media screen and (max-width: 768px) {
+
+    main {
+        padding: 7rem 1.5rem 3rem;
+    }
+
+    section {
+        padding: 4rem 1.5rem;
+    }
 
     .links {
         display: none;

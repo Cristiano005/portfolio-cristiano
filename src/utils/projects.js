@@ -20,6 +20,6 @@ export default [
         url: "https://github.com/Cristiano005",
         name: "Mais no GitHub",
         description: `Kanban, leitor de notícias, REST API com Laravel e outros projetos. Veja todos os repositórios no meu GitHub.`,
-        techTags: ["Ver tudo"],
+        techTags: ["Ver tudo ↗"],
     }
 ]

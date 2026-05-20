@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Header from './components/Header';
 import ExperienceCard from './components/ExperienceCard';
 import ProjectCard from './components/ProjectCard';
@@ -8,6 +10,8 @@ import projectsList from '../utils/projects';
 import skillsList from '../utils/skills';
 
 function App() {
+
+    const [activeId, setActiveId] = useState(1);
 
     return (
         <>
@@ -86,9 +90,10 @@ function App() {
                         <span> trabalhei </span>
                     </h2>
                 </div>
-                <div className="experience-list">
-                    {experiencesList.map(experience => <ExperienceCard key={experience.id} experience={experience}
-                        onClick={experience.isActive = !experience.isActive} />)
+                <div className="experience-list active">
+                    {experiencesList.map(experience => <ExperienceCard key={experience.id} experience={experience} activeId={activeId} onClick={() => {
+                        setActiveId(experience.id)
+                    }}/>)
                     }
                 </div>
             </section>
@@ -103,7 +108,7 @@ function App() {
                     </h2>
                 </div>
                 <div className="projects-grid">
-                    {projectsList.map(project => <ProjectCard key={project.id} project={project}
+                    {projectsList.map(project => <ProjectCard key={"project" +project.id} project={project}
                         onClick={project.isActive = !project.isActive} />)
                     }
                 </div>
@@ -119,7 +124,7 @@ function App() {
                     </h2>
                 </div>
                 <div id="skills-grid">
-                    {skillsList.map(skill => <SkillCard skill={skill} />)}
+                    {skillsList.map(skill => <SkillCard key={"skill" + skill.id} skill={skill} />)}
                 </div>
             </section>
             <section id="contact">

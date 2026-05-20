@@ -16,7 +16,7 @@ export default function ProjectCard({ project }) {
             </p>
             <div className="tech-tags">
                 {project.techTags.map(tag => 
-                    <div className="tech-tag">
+                    <div className="tech-tag" key={"projectKey" + tag}>
                        {tag}
                     </div>
                 )}
