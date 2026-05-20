@@ -138,7 +138,7 @@ function App() {
                             Se tiver uma vaga ou quiser trocar ideia sobre um projeto, me chama.
                         </p>
                         <div id="contact-links">
-                            <a href="#" className="contact-link" target="_blank">
+                            <a href="#" className="contact-link">
                                 <span> ✉ </span>
                                 cristianosilvadesousa05@gmail.com
                             </a>
@@ -150,7 +150,7 @@ function App() {
                                 <span> gh </span>
                                 Github
                             </a>
-                            <a href="#" className="contact-link" target="_blank">
+                            <a href="#" className="contact-link">
                                 <span> ☎ </span>
                                 (19) 98175-5372
                             </a>
@@ -170,7 +170,9 @@ function App() {
             <footer>
                 <h5> 
                     Cristiano Silva de Sousa — Nova Odessa, SP
-                    <span> 2026 </span>
+                </h5>
+                <h5 id="year">
+                    2026
                 </h5>
             </footer>
         </>

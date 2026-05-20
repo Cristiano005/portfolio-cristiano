@@ -13,7 +13,7 @@ export default function ExperienceCard({ experience, activeId, onClick }) {
             <div className="exp-company">
                 {experience.company}
             </div>
-            <p class="exp-note">
+            <p className="exp-note">
                 {experience.note}
             </p>
             <p className="exp-description">

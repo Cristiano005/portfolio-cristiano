@@ -274,7 +274,7 @@ div.section-label::after {
 
 .container-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19.375rem, 1fr));
+    grid-template-columns: 1fr 1fr;
     align-items: start;
     gap: 4rem;
 }
@@ -503,7 +503,7 @@ section#projects .projects-grid {
 
 section#skills #skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(15.625rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
     gap: 0.0625rem;
     border: 0.0625rem solid var(--border-color);
     border-radius: 1rem;
@@ -551,7 +551,7 @@ span.dot {
 
 section#contact #contact-inner {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     border: 0.0625rem solid var(--border-color);
     border-radius: 1rem;
     overflow: hidden;
@@ -562,6 +562,9 @@ section#contact #contact-inner {
 }
 
 #contact-info p {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    line-height: 1.7;
     margin-bottom: 2rem;
 }
 
@@ -575,11 +578,14 @@ section#contact #contact-inner {
     display: flex;
     align-items: center;
     gap: 0.8rem;
+    font-size: 0.88rem;
     color: var(--text-color);
     border: 0.0625rem solid var(--border-color);
     border-radius: 0.6rem;
     padding: 0.8rem 1rem;
+    min-height: 2.5rem;
     transition: border-color 0.2s, background-color 0.2s;
+    word-break: break-all;
 }
 
 .contact-link:hover {
@@ -609,6 +615,11 @@ section#contact #contact-inner {
     margin-bottom: 1.2rem;
 }
 
+#extres h3 span {
+    font-style: italic;
+    color: var(--light-green-color);
+}
+
 #extres a {
     background-color: var(--light-green-color);
     color: var(--black-color);
@@ -617,6 +628,7 @@ section#contact #contact-inner {
 footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 68.75rem;
     margin: 0 auto;
     padding: 2rem 2.5rem;
@@ -627,6 +639,18 @@ footer h5 {
     font-size: 0.78rem;
     color: var(--gray-color);
     font-weight: 300;
+}
+
+@media screen and (max-width: 480px) {
+
+    #contact-info {
+        padding: 2rem 1.5rem;
+    }
+
+    #contact-extres {
+        padding: 2rem 1.5rem;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -643,4 +667,15 @@ footer h5 {
         display: none;
     }
 
+    .container-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+
+    #contact-inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    #extres h3 {
+        font-size: 2rem;
+    }
 }
