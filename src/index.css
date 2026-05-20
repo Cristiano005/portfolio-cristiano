@@ -503,7 +503,8 @@ section#projects .projects-grid {
 
 section#skills #skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(15.625rem, 1fr));
+    gap: 0.0625rem;
     border: 0.0625rem solid var(--border-color);
     border-radius: 1rem;
     overflow: hidden;
